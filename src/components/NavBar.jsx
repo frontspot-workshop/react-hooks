@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { resourceTypeContext } from "../App";
 import { RESOURCE_TYPE } from "../shared/constants";
 
-const NavBar = ({ handleClick = () => {}, selectedType = RESOURCE_TYPE.CHARACTER }) => {
+const NavBar = ({ handleClick = () => {} }) => {
+  const selectedType=useContext(resourceTypeContext);
 
   return (
     <div className="nav">

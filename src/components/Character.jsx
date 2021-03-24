@@ -1,4 +1,6 @@
 import Card from "./Card";
+import {dataContext} from '../App';
+import { useContext } from "react";
 
 const STATUS_STYLE = {
   ALIVE: "green",
@@ -6,7 +8,8 @@ const STATUS_STYLE = {
   UNKNOWN: "gray",
 };
 
-const Character = ({data = []}) => {
+const Character = () => {
+  const data = useContext(dataContext);
 
   return data?.map((item) => {
     const { name, image, status, species, location } = item;

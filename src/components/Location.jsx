@@ -1,6 +1,9 @@
 import Card from "./Card";
+import { dataContext } from "../App";
+import { useContext } from "react";
 
-const Location = ({data = []}) => {
+const Location = () => {
+  const data = useContext(dataContext);
 
   return data?.map((item) => {
     const { name, type, dimension } = item;

@@ -1,6 +1,9 @@
-import Card from './Card';
+import Card from "./Card";
+import { dataContext } from "../App";
+import { useContext } from "react";
 
-const Episode = ({data = []}) => {
+const Episode = () => {
+  const data = useContext(dataContext);
 
   return data?.map((item) => {
     const { name, air_date, episode } = item;
